@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Live Chat | ANKUR THAKUR</title>
+    <link rel="shortcut icon" href="./images/amci.png" type="image/vnd.microsoft.icon"/>
+    <link rel="canonical" href="http://www.ankurthakur.info/"/>
+<link rel="shortlink" href="http://www.ankurthakur.info/"/>
+    <link rel="stylesheet" type="text/css" href="styles/home/main.css">
+    <script type="text/javascript" src="./scripts/jquery.js"></script>
+    <style>
+        
+        #blk{
+    animation:blinkingText 0.5s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(238, 8, 8);    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: rgb(252, 1, 1);    }
+}
+    </style>
+</head>
+<body>
+<form action="404.html">
+    <div class="main-container ">
+            <div class="">
+        <div class="center-middle create ">
+                
+            <div class="myriad heading-1 ">
+              Welcome To <font id="blk" color="red">Live</font> video calling</span> 
+            </div>
+            <br>
+            <div class="myriad">
+                
+                <button type="submit"  name="Create Class"  class=" room-name ">get started</button>
+            </div>
+            
+        </div>
+    </div>
+        <div class="bottom-right">
+            <a href="https://amci.net.in/" target="_blank">
+                <img class="u-full-width" src="./images/amci.png" alt="www.ankurthakur.info"/>
+            </a>
+        </div>
+    </div>
+</form>
+    <script type="text/javascript">
+        $( document).ready(function() {
+            $('.room-name').keyup(function(e){
+                if(e.keyCode == 13)
+                {
+                    var room = $(this).val().trim();
+                    if( room != '' ) {
+                        location.href = "/"+room;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
